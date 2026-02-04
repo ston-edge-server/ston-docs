@@ -466,7 +466,7 @@ Content Freshness 판단정책
    # server.xml - <Server><VHostDefault><Options>
    # vhosts.xml - <Vhosts><Vhost><Options>
 
-   <ContentFreshnessCheck>BOTH</ContentFreshnessCheck>
+   <ContentFreshnessCheck IgnoreEtagQuotes="OFF">BOTH</ContentFreshnessCheck>
 
 -  ``<ContentFreshnessCheck>``
 
@@ -476,6 +476,8 @@ Content Freshness 판단정책
 
    -  ``ETAG`` ETag 만으로 동일 콘텐츠로 판단한다.
 
+
+클라이언트가 보낸 ``ETag`` 헤더 값에 따옴표가 포함된 경우, 이를 무시하려면 ``IgnoreEtagQuotes`` 속성을 ``ON`` 으로 설정한다.
 
 
 .. _handling_http_requests_modify_client:
