@@ -596,15 +596,25 @@ Value가 입력되지 않은 경우 빈 값("")이 입력된다.
 {Match}와 일치하더라도 {Condition}과 일치하지 않는다면 변경이 반영되지 않는다.
 {Condition}이 생략된 경우 응답코드를 검사하지 않는다.
 
-클라이언트가 보낸 헤더의 값은 $REQ. ``header-name`` 로 참조한다. 
-이를 이용해 클라이언트가 보낸 헤더 값을 응답 헤더와 원본 요청 헤더에 명시할 수 있다. ::
+-  클라이언트가 보낸 헤더의 값은 ``$REQ.{헤더}`` 로 참조한다. 
+   이를 이용해 클라이언트가 보낸 헤더 값을 응답 헤더와 원본 요청 헤더에 명시할 수 있다. ::
 
-   # 응답변경 - 클라이언트 헤더 참조
-   # 클라이언트가 보낸 요청의 Origin헤더 값을 응답의 Access-Control-Allow-Origin 헤더 값으로 설정한다.
-   $URL[*.html], $RES[Access-Control-Allow-Origin: $REQ.Origin], Set
+      # 응답변경 - 클라이언트 헤더 참조
+      # 클라이언트가 보낸 요청의 Origin헤더 값을 응답의 Access-Control-Allow-Origin 헤더 값으로 설정한다.
+      $URL[*.html], $RES[Access-Control-Allow-Origin: $REQ.Origin], Set
 
-   # 클라이언트가 보낸 요청의 여러 헤더 값을 응답의 X-Cookie 헤더 값으로 설정한다.
-   $URL[*.json], $RES[X-Cookie: $REQ.[User-Agent, Host]], Set
+      # 클라이언트가 보낸 요청의 여러 헤더 값을 응답의 X-Cookie 헤더 값으로 설정한다.
+      $URL[*.json], $RES[X-Cookie: $REQ.[User-Agent, Host]], Set
+
+
+-  클라이언트가 보낸 쿼리스트링 값은 ``$QUERYSTRING.{키}`` 로 참조한다. 
+   이를 이용해 클라이언트가 보낸 쿼리스트링의 단일,멀티 값을 응답 헤더에 명시할 수 있다. ::
+
+      # 클라이언트가 보낸 요청의 쿼리스트링 중 category_id 값을 응답헤더의 X-Cookie1 값으로 설정한다.
+      $URL[*.html], $RES[X-Cookie1: $QUERYSTRING.category_id], Set
+
+      # 복수의 쿼리스트링을 사용해야 한다면 [ ] 표현을 사용한다.
+      $URL[*.json], $RES[X-Cookie2: $QUERYSTRING.[category_id, shop_id]], Set
 
 
 특수 목적의 예약어를 지원한다.
