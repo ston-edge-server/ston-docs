@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__winesoft-llm-wiki__status",
+      "mcp__winesoft-llm-wiki__query",
+      "mcp__winesoft-llm-wiki__get",
+      "mcp__winesoft-llm-wiki__multi_get"
+    ]
+  },
+  "hooks": {}
+}
