@@ -6,6 +6,14 @@ Appendix E: 릴리스 노트
 v2.12.x
 ====================================
 
+.. _release-cdn-2-12-17:
+
+2.12.17
+----------------------------
+
+-  :ref:`handling_http_requests_modify_client` — ``#CACHEKEY`` 예약어 추가
+
+
 .. _release-cdn-2-12-16:
 
 2.12.16 (2026.06.24)
