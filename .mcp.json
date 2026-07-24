@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "winesoft-llm-wiki": {
+      "type": "http",
+      "url": "http://192.168.0.177:8190/mcp"
+    }
+  }
+}
