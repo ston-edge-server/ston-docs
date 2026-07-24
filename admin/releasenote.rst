@@ -6,6 +6,21 @@ Appendix E: 릴리스 노트
 v2.12.x
 ====================================
 
+.. _release-cdn-2-12-17:
+
+2.12.17 (2026.07.24)
+----------------------------
+
+-  :ref:`handling_http_requests_modify_client` - ``#CACHEKEY`` 예약어 추가
+-  STON 시작/중지 스크립트 ``/etc/init.d/ston start|stop|restart`` 개선
+-  Syslog 전송시 메시지가 잘리는 증상 수정
+-  ImageTool(DIMS) 보안 취약점 개선
+-  통계 항목 정정
+   
+   -  원본(비압축/이미지 원본) 캐싱이 존재하는 상태에서 파생객체 생성(압축/이미지 변환) 시 판정을 ``TCP_MISS`` 에서 ``TCP_HIT`` 로 정정
+
+
+
 .. _release-cdn-2-12-16:
 
 2.12.16 (2026.06.24)
