@@ -11,8 +11,9 @@ v2.12.x
 2.12.18 (2026.08.06)
 ----------------------------
 
--  Purge 기능 고도화 - :ref:`adv-vhost-link` 가 설정 된 경우 Purge 계열 API가 링크를 추적하여 일괄처리
+-  Purge 기능 고도화 - :ref:`adv-vhost-link` 가 설정 된 경우 Purge 계열 API가 링크를 추적하여 일괄 처리
 -  WM - 가상 호스트목록 페이지에 ``이름`` 검색필터 추가
+-  WM - :ref:`caching-policy-custom-cachingkey` 설정이 표시 되지 않는 버그 수정
 
 
 
