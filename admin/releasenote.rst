@@ -6,6 +6,17 @@ Appendix E: 릴리스 노트
 v2.12.x
 ====================================
 
+.. _release-cdn-2-12-19:
+
+2.12.19 (2026.10.21)
+----------------------------
+
+-  WM - 내장 Apache httpd ``2.4.68`` 업데이트 (보안 패치)
+-  WM - 보안 권고 사항 기본 반영 (에러 페이지 응답 지정, 설정 파일 권한/실행 계정 정비)
+-  :ref:`handling_http_requests_modify_client` - 클라이언트 IP 기반 국가 코드(ISO 3166-1 alpha-2)를 지칭하는 ``#COUNTRYCODE`` 예약어 추가 ( :ref:`access-control-geoip` 설정 필요)
+-  :ref:`admin-log-origin` - ``time-request`` 필드의 밀리초가 3자리가 아니게 기록되던 문제 수정 (예: ``5ms`` 가 ``.5`` 로 기록)
+
+
 .. _release-cdn-2-12-18:
 
 2.12.18 (2026.08.06)

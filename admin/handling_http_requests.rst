@@ -630,8 +630,13 @@ Value가 입력되지 않은 경우 빈 값("")이 입력된다.
 ``#CLIENTIP``              클라이언트 IP
 ``#URI``                   클라이언트 요청 URI (응답헤더 변조시점에만 동작)
 ``#CACHEKEY``              캐시 키
+``#COUNTRYCODE``           클라이언트 IP 기반 국가 코드(ISO 3166-1 alpha-2)
 ========================== =============================================================
-   
+
+.. note::
+
+   ``#COUNTRYCODE`` 는 :ref:`access-control-geoip` 가 설정되어 있어야 동작한다.
+
 ::
 
    $URL[*], $REQ[X-Forwarded-Proto: #PROTOCOL], set
@@ -640,6 +645,7 @@ Value가 입력되지 않은 경우 빈 값("")이 입력된다.
    $URL[*], $RES[X-Cache-Result: #CACHEHIT], set
    $URL[*], $RES[X-Cache-Sessionid: #SESSIONID], set
    $URL[*], $RES[X-Cache-Hostname: #HOSTNAME], set
+   $URL[*], $RES[X-Country-Code: #COUNTRYCODE], set
 
 
 
