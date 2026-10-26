@@ -6,6 +6,16 @@ Appendix E: 릴리스 노트
 v2.12.x
 ====================================
 
+.. _release-cdn-2-12-20:
+
+2.12.20 (2026.10.26)
+----------------------------
+
+-  WM - 내장 PHP 업데이트 ( ``5.3.29`` → ``8.4.27`` ) - 보안 패치 `CVE-2026-109618 <https://www.cve.org/CVERecord?id=CVE-2026-109618>`_ , `CVE-2026-109619 <https://www.cve.org/CVERecord?id=CVE-2026-109619>`_
+-  WM - 사용하지 않는 캐싱 디스크 포맷 기능 제거 (보안)
+-  비동기 캐시 무효화 상태 :ref:`caching-purge-async-getter` ( ``/monitoring/asynctrl/info`` ) - URL이 4,000자를 넘는 항목이 잘려 JSON이 깨지던 문제 수정
+
+
 .. _release-cdn-2-12-19:
 
 2.12.19 (2026.10.21)
