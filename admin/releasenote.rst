@@ -6,6 +6,18 @@ Appendix E: 릴리스 노트
 v2.12.x
 ====================================
 
+.. _release-cdn-2-12-21:
+
+2.12.21 (2026.11.11)
+----------------------------
+
+-  ``Ubuntu 26.04`` 지원 ( :ref:`getting-started-os` )
+-  :ref:`monitoring-stats-host` - 커널 4.18 이상( ``CentOS 8`` , ``Ubuntu 20.04`` 이상 등)에서 ``Disk`` 성능 수치가 항상 0으로 나오던 문제 수정
+-  :ref:`origin_aws_s3_authentication` - 경로·쿼리스트링에 ``@`` 등 예약 문자가 있으면 원본이 ``403 (SignatureDoesNotMatch)`` 으로 응답하던 문제 수정
+-  WM - Ubuntu 26에서 STON 재시작 후 WM이 무한 로딩되고 접속이 안 되던 문제 수정
+-  WM - 셸 명령 호출을 PHP 내장 함수로 대체하고 인증·입력값 검증 강화
+
+
 .. _release-cdn-2-12-20:
 
 2.12.20 (2026.10.26)
