@@ -6,6 +6,32 @@ Appendix E: 릴리스 노트
 v2.12.x
 ====================================
 
+.. _release-cdn-2-12-22:
+
+2.12.22 (2026.11.26)
+----------------------------
+
+-  :ref:`access-control-geoip` - GeoIP Legacy(GeoIP1) 지원 종료, GeoIP2 만 지원
+-  설치 시 libfuse 를 OS 패키지로 설치하도록 변경 (패키지 동봉 제외, 설치 실패 시 STON 설치 중단)
+-  (Beta) fMP4 HLS 기능 추가 - MP4·M4A 원본을 fMP4(CMAF) HLS 로 실시간 변환 (AES-128 암호화 지원)
+-  원본 DNS 응답 대기시간 설정 기능 추가 ( ``<DnsResolveTimeout>`` , 기본 10초)
+-  AES 암호화 모듈을 OpenSSL 로 교체
+-  오픈소스 라이선스 고지 갱신
+-  로그 정리 시 이름에 로그 접두어가 들어 있는 다른 파일( ``ston_diskinfo.sh`` , access-extra 로그 등)까지 삭제되던 문제 수정
+-  :ref:`media-trimming` - MP4/M4A 파일 끝부분을 아주 짧게 자르는 요청 시 비정상 종료되던 문제 수정
+-  :ref:`media-dims` 개선
+
+   -  PNG 변환 시 팔레트 유지 처리를 팔레트 계열 원본(팔레트 PNG·GIF)에만 적용하도록 변경
+   -  format 변환 시 지원 포맷(jpg·jpeg·png·gif·webp·tiff·bmp) 외의 포맷은 변환하지 않도록 변경 - ``format/html`` 요청 시 비정상 종료되던 문제 수정
+
+-  DRM·DIMS·압축 결과가 1MB 를 넘는 파일이 원본 갱신으로 다시 만들어질 때, 갱신을 기다리던 요청이 ``500`` 으로 응답되던 문제 수정
+-  WM - 내장 PHP 업데이트 ( ``8.4.27`` → ``8.4.28`` ) - 보안 패치 `CVE-2026-126714 <https://www.cve.org/CVERecord?id=CVE-2026-126714>`_ , `CVE-2026-115560 <https://www.cve.org/CVERecord?id=CVE-2026-115560>`_ , `CVE-2026-129481 <https://www.cve.org/CVERecord?id=CVE-2026-129481>`_
+-  WM - 내장 Apache httpd ``2.4.71`` 업데이트 (보안 패치)
+-  WM - (Beta) 가상호스트 미디어 설정에 fMP4 HLS 항목 추가
+-  WM - 전역 설정에 DNS 응답 대기시간 항목 추가
+-  WM - 접근제어의 GeoIP 모듈 선택 제거 (GeoIP2 고정)
+
+
 .. _release-cdn-2-12-21:
 
 2.12.21 (2026.11.11)
